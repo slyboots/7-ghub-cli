@@ -10,23 +10,152 @@ import requests
 # configuration variable definitions
 API_URL = 'https://api.github.com'
 ACCESS_TOKEN = os.getenv('GITHUB_ACCESS_TOKEN')
+# license template list created using the github api
+# https://api.github.com/licenses
+LICENSES = [
+    "lgpl-3.0",
+    "bsd-3-clause",
+    "lgpl-2.1",
+    "mit",
+    "apache-2.0",
+    "epl-1.0",
+    "unlicense",
+    "agpl-3.0",
+    "mpl-2.0",
+    "bsd-2-clause",
+    "gpl-3.0",
+    "gpl-2.0"
+]
+# getignore template list created using the github api.
+# https://api.github.com/gitignore/templates
+GITIGNORES = [
+    "Actionscript",
+    "Ada",
+    "Agda",
+    "Android",
+    "AppEngine",
+    "AppceleratorTitanium",
+    "ArchLinuxPackages",
+    "Autotools",
+    "C",
+    "C++",
+    "CFWheels",
+    "CMake",
+    "CUDA",
+    "CakePHP",
+    "ChefCookbook",
+    "Clojure",
+    "CodeIgniter",
+    "CommonLisp",
+    "Composer",
+    "Concrete5",
+    "Coq",
+    "CraftCMS",
+    "D",
+    "DM",
+    "Dart",
+    "Delphi",
+    "Drupal",
+    "EPiServer",
+    "Eagle",
+    "Elisp",
+    "Elixir",
+    "Elm",
+    "Erlang",
+    "ExpressionEngine",
+    "ExtJs",
+    "Fancy",
+    "Finale",
+    "ForceDotCom",
+    "Fortran",
+    "FuelPHP",
+    "GWT",
+    "GitBook",
+    "Go",
+    "Gradle",
+    "Grails",
+    "Haskell",
+    "IGORPro",
+    "Idris",
+    "Java",
+    "Jboss",
+    "Jekyll",
+    "Joomla",
+    "Julia",
+    "KiCAD",
+    "Kohana",
+    "LabVIEW",
+    "Laravel",
+    "Leiningen",
+    "LemonStand",
+    "Lilypond",
+    "Lithium",
+    "Lua",
+    "Magento",
+    "Maven",
+    "Mercury",
+    "MetaProgrammingSystem",
+    "Nim",
+    "Node",
+    "OCaml",
+    "Objective-C",
+    "Opa",
+    "OracleForms",
+    "Packer",
+    "Perl",
+    "Phalcon",
+    "PlayFramework",
+    "Plone",
+    "Prestashop",
+    "Processing",
+    "PureScript",
+    "Python",
+    "Qooxdoo",
+    "Qt",
+    "R",
+    "ROS",
+    "Rails",
+    "RhodesRhomobile",
+    "Ruby",
+    "Rust",
+    "SCons",
+    "Sass",
+    "Scala",
+    "Scheme",
+    "Scrivener",
+    "Sdcc",
+    "SeamGen",
+    "SketchUp",
+    "Smalltalk",
+    "SugarCRM",
+    "Swift",
+    "Symfony",
+    "SymphonyCMS",
+    "TeX",
+    "Terraform",
+    "Textpattern",
+    "TurboGears2",
+    "Typo3",
+    "Umbraco",
+    "Unity",
+    "UnrealEngine",
+    "VVVV",
+    "VisualStudio",
+    "Waf",
+    "WordPress",
+    "Xojo",
+    "Yeoman",
+    "Yii",
+    "ZendFramework",
+    "Zephir",
+    "gcov",
+    "nanoc",
+    "opencart",
+    "stella"
+]
 
-# utility functions
 
-
-def get_gitignores():
-    '''get list of github .gitignore templates'''
-    return requests.get(f"{API_URL}/gitignore/templates").json()
-
-
-def get_licenses():
-    '''get list of github license templates'''
-    accept_header = {'Accept': 'application/vnd.github.drax-preview+json'}
-    licenses = requests.get(f"{API_URL}/licenses",
-                            headers=accept_header).json()
-    return [l['key'] for l in licenses]
-
-
+# subcommand functions
 def new_entry_func(args):
     '''
     entry func for new sub-command
@@ -64,9 +193,6 @@ PARSER = ArgParser(
 SUBPARSERS = PARSER.add_subparsers(help='sub-command help')
 
 # new repository sub-command
-GITIGNORES = get_gitignores()
-LICENSES = get_licenses()
-
 NEW_SUBPARSER = SUBPARSERS.add_parser(
     'new', help='create a new remote repository'
 )
@@ -123,9 +249,8 @@ NEW_SUBPARSER.add_argument(
 )
 NEW_SUBPARSER.set_defaults(func=new_entry_func)
 
+
 # main entry func
-
-
 def entry_func():
     try:
         if ACCESS_TOKEN is None:
