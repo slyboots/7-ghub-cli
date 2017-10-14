@@ -2,7 +2,7 @@
 *A simple cli for managing github repos*
 
 ## TODO: ##
-- Delete repositories
+- Delete repos
 - Get filtered repo info (*and maybe save it to the clipboard?*)
 
 ## Overview ##
