@@ -2,7 +2,7 @@
 *A simple cli for managing github repos*
 
 ## Overview ##
-the primary goal of this project is to make the information for all of my repos more immediately available to me.
+The primary goal of this project is to make the information for all of my other project more immediately available to me.
 Up until recently, I didn't mind clicking through all of github to start a new repo, but now that I'm trying to create something each week my initial workflow has become a bunch of annoying steps and I'm lazy.
 
 ### The annoying process of starting a project on github: ###
