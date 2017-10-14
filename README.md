@@ -5,7 +5,7 @@
 The primary goal of this project is to make the information for all of my other projects more immediately available to me.
 Up until recently, I didn't mind clicking through all of github to start a new repo, but now that I'm trying to create something each week my initial workflow has become a bunch of annoying steps and I'm lazy.
 
-### The annoying process of starting a project on github: ###
+__The annoying process of starting a project on github:__
 - Navigate to github.com and fill out the log in form.
 - Wait for the two factor authentication text to be sent to my phone.
 - Type the code in
