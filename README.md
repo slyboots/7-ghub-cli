@@ -1,6 +1,10 @@
 # ghub cli #
 *A simple cli for managing github repos*
 
+## TODO: ##
+- Delete repositories
+- Get filtered repo info (*and maybe save it to the clipboard?*)
+
 ## Overview ##
 The primary goal of this project is to make the information for all of my other projects more immediately available to me.
 Up until recently, I didn't mind clicking through all of github to start a new repo, but now that I'm trying to create something each week my initial workflow has become a bunch of annoying steps and I'm lazy.
