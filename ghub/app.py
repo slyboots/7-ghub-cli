@@ -194,7 +194,7 @@ def rm_entry_func(args):
     entry func for the rm sub-command
     deletes a remote repository
     '''
-    repo_endpoint = f"{API_URL}/{USER_NAME}/{args.name}"
+    repo_endpoint = f"{API_URL}/repos/{USER_NAME}/{args.name}"
     res = requests.delete(repo_endpoint)
     res.raise_for_status()
     if res.status_code == 204:
