@@ -287,12 +287,12 @@ def entry_func():
             raise EnvironmentError
         ARGS = PARSER.parse_args()
         ARGS.func(ARGS)
-    except EnvironmentError:
-        print("ERROR: Missing required environment variables.\n"
-              "Are GITHUB_ACCESS_TOKEN and GITHUB_USER_NAME set?")
     except AttributeError as atr_err:
         print(f"ERROR: {atr_err}")
         PARSER.print_help()
+    except EnvironmentError:
+        print("ERROR: Missing required environment variables.\n"
+              "Are GITHUB_ACCESS_TOKEN and GITHUB_USER_NAME set?")
     except Exception as err:
         print(f"unknown error: {err}")
 
