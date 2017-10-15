@@ -3,7 +3,6 @@
 
 ## TODO: ##
 - Make the new command have output that's actually understandable
-- Delete repos
 - Get filtered repo info (*and maybe save it to the clipboard?*)
 ## Overview ##
 The primary goal of this project is to make the information for all of my other projects more immediately available to me.
@@ -25,23 +24,24 @@ __The annoying process of starting a project on github:__
 __I want to:__
 - Create a remote repo for a project without leaving the terminal I'm brainstorming in
 - Delete those repos just as fast if the idea doesnt come together as hoped
-- Grab project info thats ready to be used while editing my blog without leaving my text editor
 - Hike the Appalachian Trail and become friends with a bear.
 
-I should be able to get at least 3/4 easy.
+I should be able to get 2/3 easy.
 
 ## Details ##
 
 ### Requirements ###
-- [Python 3.6](python.org)
+- [Python 3.6](https://python.org)
 - [Requests](http://docs.python-requests.org/en/master/)
-
+- Two environment variables:
+    - `GITHUB_ACCESS_TOKEN`: a personal access token generated on github.com with `repo` and `delete_repo` scopes
+    - `GITHUB_USER_NAME`: your github user name.
 ### Installation ###
 1. clone the repo
 2. cd into the project directory
 3. install using something similar to: `pip3 install --editable . --user`
+4. make sure to set 
 4. confirm installation by running: `ghub -h` in your terminal
-
 And you're done. If you get to step 4 and it doesn't work, you're on your own!
 ### Usage ### 
 In a termial run: `ghub -h` or `ghub new -h`
