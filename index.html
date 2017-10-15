@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>ghub-cli</title><style>*{box-sizing:border-box}.cxs-display-table{display:table}.cxs-2947628758 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-3954183383{font-size:24px}.cxs-291348840 a:hover{color:#ee5544}.cxs-4066908388{clear:both}.cxs-799160745{font-size:48px}.cxs-1246195080{margin-left:-8px;margin-right:-8px}.cxs-2947628758{}.cxs-2947628758 h1{font-weight:600;line-height:1.25;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h2{font-weight:600;line-height:1.25;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h3{font-weight:600;line-height:1.25;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h4{font-weight:600;line-height:1.25;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h5{font-weight:600;line-height:1.25;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h6{font-weight:600;line-height:1.25;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-2947628758 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre .hljs-keyword{color:#08e}.cxs-2947628758 pre .hljs-built_in{color:#059}.cxs-2947628758 pre .hljs-type{color:#059}.cxs-2947628758 pre .hljs-literal{color:#08e}.cxs-2947628758 pre .hljs-number{color:#e08}.cxs-2947628758 pre .hljs-regexp{color:#08e}.cxs-2947628758 pre .hljs-string{color:#059}.cxs-2947628758 pre .hljs-subst{color:#059}.cxs-2947628758 pre .hljs-symbol{color:#08e}.cxs-2947628758 pre .hljs-class{color:#08e}.cxs-2947628758 pre .hljs-function{color:#e08}.cxs-2947628758 pre .hljs-title{color:#08e}.cxs-2947628758 pre .hljs-params{color:#059}.cxs-2947628758 pre .hljs-comment{color:#059}.cxs-2947628758 pre .hljs-doctag{color:#059}.cxs-2947628758 pre .hljs-meta{color:#059}.cxs-2947628758 pre .hljs-meta-keyword{color:#08e}.cxs-2947628758 pre .hljs-meta-string{color:#08e}.cxs-2947628758 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #ddd}.cxs-2947628758 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-2947628758 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-2947628758 td{vertical-align:top;line-height:inherit}.cxs-291348840 a{color:inherit}.cxs-2947628758 a{color:#08e;text-decoration: none}.cxs-2947628758 a:hover{text-decoration:underline}.cxs-2947628758 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-291348840{font-size:20px;line-height:1.625}.cxs-291348840 h1{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:48px;margin-top:48px;margin-bottom:8px}.cxs-291348840 h2{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:24px;margin-top:48px;margin-bottom:8px}.cxs-291348840 h3{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:20px;margin-top:48px;margin-bottom:8px}.cxs-291348840 h4{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-291348840 h5{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-291348840 h6{font-weight:400;text-transform:uppercase;letter-spacing:0.1em;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-291348840 p{overflow-x:auto;font-size:20px;margin-top:0px;margin-bottom:16px}.cxs-291348840 code{font-family:Menlo, monospace;font-size:14px;color:#005499}.cxs-291348840 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding-left:16px;margin-top:8px;margin-bottom:32px;border-left:2px solid #ddd}.cxs-291348840 pre .hljs-keyword{color:#ee5544}.cxs-291348840 pre .hljs-built_in{color:#005499}.cxs-291348840 pre .hljs-type{color:#005499}.cxs-291348840 pre .hljs-literal{color:#ee5544}.cxs-291348840 pre .hljs-number{color:#00bd78}.cxs-291348840 pre .hljs-regexp{color:#ee5544}.cxs-291348840 pre .hljs-string{color:#005499}.cxs-291348840 pre .hljs-subst{color:#005499}.cxs-291348840 pre .hljs-symbol{color:#ee5544}.cxs-291348840 pre .hljs-class{color:#ee5544}.cxs-291348840 pre .hljs-function{color:#00bd78}.cxs-291348840 pre .hljs-title{color:#ee5544}.cxs-291348840 pre .hljs-params{color:#005499}.cxs-291348840 pre .hljs-comment{color:#005499}.cxs-291348840 pre .hljs-doctag{color:#005499}.cxs-291348840 pre .hljs-meta{color:#005499}.cxs-291348840 pre .hljs-meta-keyword{color:#ee5544}.cxs-291348840 pre .hljs-meta-string{color:#ee5544}.cxs-291348840 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom:2px solid #ddd}.cxs-291348840 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-291348840 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-291348840 td{vertical-align:top;line-height:inherit}.cxs-291348840 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-291348840 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}@media screen and (min-width: 52em) { .cxs-799160745{font-size:72px} }@media screen and (min-width: 52em) { .cxs-3954183383{} }</style></head><body style="margin:0;"><div class="Xv" style="font-family:Athelas, Georgia, serif;font-weight:400;line-height:1.5;color:#121212;background-color:#fff;"><nav style="display:flex;align-items:center;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;background-color:#fff;"><a href="https://github.com/slyboots/7-ghub-cli" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">Home</a><a href="https://github.com/slyboots/7-ghub-cli" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a></nav><header class="BannerHeader" style="display:flex;align-items:center;justify-content:center;text-align:left;min-height:100vh;color:#121212;background-color:#f3f3f3;background-image:url(undefined);background-size:cover;background-position:center;"><div style="box-sizing:border-box;width:100%;max-width:768px;margin-left:auto;margin-right:auto;padding-top:48px;padding-bottom:48px;padding-left:32px;padding-right:32px;"><h1 class="cxs-799160745" style="box-sizing:border-box;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;margin:0;">7-ghub-cli</h1><h2 class="cxs-3954183383" style="box-sizing:border-box;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;margin:0;">A simple cli for managing github repos</h2><div class="cxs-1246195080" style="box-sizing:border-box;padding-top:16px;padding-bottom:16px;"><iframe src="https://platform.twitter.com/widgets/tweet_button.html?text=7-ghub-cli%3A%20A%20simple%20cli%20for%20managing%20github%20repos&amp;url=https%3A%2F%2Fgithub.com%2Fslyboots%2F7-ghub-cli&amp;via=&amp;hashtags=&amp;size=" height="20" allowtransparency="true" frameborder="0" scrolling="no" style="box-sizing:border-box;width:61px;overflow:hidden;margin:8px;"></iframe><iframe src="https://ghbtns.com/github-btn.html?type=star&amp;count=true&amp;user=slyboots&amp;repo=7-ghub-cli&amp;size=" height="20" frameborder="0" scrolling="no" style="box-sizing:border-box;width:100px;overflow:hidden;margin:8px;"></iframe><div class="cxs-4066908388 cxs-display-table"></div></div></div></header><div class="cxs-291348840" style="box-sizing:border-box;max-width:768px;margin-left:auto;margin-right:auto;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;"><article style="box-sizing:border-box;"><div>
+
+<h2>TODO:</h2>
+<ul>
+<li>Make the new command have output that's actually understandable</li>
+<li>Delete repos</li>
+<li>Get filtered repo info (<em>and maybe save it to the clipboard?</em>)<h2>Overview</h2>
+The primary goal of this project is to make the information for all of my other projects more immediately available to me.
+Up until recently, I didn't mind clicking through all of github to start a new repo, but now that I'm trying to create something each week my initial workflow has become a bunch of annoying steps and I'm lazy.</li>
+</ul>
+<p><strong>The annoying process of starting a project on github:</strong></p>
+<ul>
+<li>Navigate to github.com and fill out the log in form.</li>
+<li>Wait for the two factor authentication text to be sent to my phone.</li>
+<li>Type the code in</li>
+<li>Better retype it just to make sure I got it right so I dont have to wait for a new code</li>
+<li>Fill out the forms to create the repo(s) on github.com</li>
+<li>Grab the url after watching the page to reload so I can clone it locally</li>
+<li>Manually transfer over any brainstorming I'd done while messing around in to the new project folder</li>
+<li>start the whole project setup process (This isnt to bad with scaffolding tools)</li>
+<li>Eventually have to manually copy project info to my blog</li>
+<li>Start editing and formatting it for the blog post</li>
+<li>meh...</li>
+</ul>
+<p><strong>I want to:</strong></p>
+<ul>
+<li>Create a remote repo for a project without leaving the terminal I'm brainstorming in</li>
+<li>Delete those repos just as fast if the idea doesnt come together as hoped</li>
+<li>Grab project info thats ready to be used while editing my blog without leaving my text editor</li>
+<li>Hike the Appalachian Trail and become friends with a bear.</li>
+</ul>
+<p>I should be able to get at least 3/4 easy.</p>
+<h2>Details</h2>
+<h3>Requirements</h3>
+<ul>
+<li><a href="python.org">Python 3.6</a></li>
+<li><a href="http://docs.python-requests.org/en/master/">Requests</a></li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>clone the repo</li>
+<li>cd into the project directory</li>
+<li>install using something similar to: <code>pip3 install --editable . --user</code></li>
+<li>confirm installation by running: <code>ghub -h</code> in your terminal</li>
+</ol>
+<p>And you're done. If you get to step 4 and it doesn't work, you're on your own!</p>
+<h3>Usage</h3>
+<p>In a termial run: <code>ghub -h</code> or <code>ghub new -h</code></p>
+<h3>Examples</h3>
+<ul>
+<li><p>Help text for <strong>ghub</strong> command:</p>
+<pre>  <span class="hljs-attribute">usage</span>: ghub [-h] {new} ...
+
+<span class="vim">  <span class="hljs-keyword">a</span> simple cli <span class="hljs-keyword">for</span> managing github repos.
+
+  positional <span class="hljs-keyword">argument</span><span class="hljs-variable">s:</span>
+    {<span class="hljs-keyword">new</span>}       sub-<span class="hljs-keyword">command</span> <span class="hljs-keyword">help</span>
+      <span class="hljs-keyword">new</span>       create <span class="hljs-keyword">a</span> <span class="hljs-keyword">new</span> remote repository
+
+  optional <span class="hljs-keyword">argument</span><span class="hljs-variable">s:</span>
+    -h, --<span class="hljs-keyword">help</span>  show this <span class="hljs-keyword">help</span> message <span class="hljs-built_in">and</span> <span class="hljs-keyword">exit</span></span></pre></li>
+<li><p>Help text for <strong>ghub new</strong> command:</p>
+<pre>  usage: ghub <span class="hljs-built_in">new</span> [-h] [-d DESCRIPTION] [-u <span class="hljs-built_in">URL</span>] [-p] [-I] [-J] [-W] [-<span class="hljs-keyword">a</span>]
+                  [-gi GITIGNORE] [-li LICENSE]
+                  name
+
+  positional arguments:
+    name                  name <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> remote repo
+
+  optional arguments:
+    -h, <span class="hljs-comment">--help            show this help message and exit</span>
+    -d DESCRIPTION, <span class="hljs-comment">--description DESCRIPTION</span>
+                          <span class="hljs-keyword">short</span> description <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> repo
+    -u <span class="hljs-built_in">URL</span>, <span class="hljs-comment">--url URL     A URL with more info about the repo</span>
+    -p, <span class="hljs-comment">--private         Pass to create a private repo</span>
+    -I, <span class="hljs-comment">--noissues        Disable issues for the repo</span>
+    -J, <span class="hljs-comment">--noprojects      Disable projects for the repo</span>
+    -W, <span class="hljs-comment">--nowiki          Disable wiki for repo</span>
+    -<span class="hljs-keyword">a</span>, <span class="hljs-comment">--autoinit        Create repo with empty README commited</span>
+    -gi GITIGNORE, <span class="hljs-comment">--gitignore GITIGNORE</span>
+                          Choose <span class="hljs-literal">one</span> <span class="hljs-keyword">of</span> these .gitignore templates <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span>
+                          project: Actionscript, Ada, Agda, Android,     AppEngine,
+                          AppceleratorTitanium, ArchLinuxPackages, Autotools,     C,
+                          C++, CFWheels, CMake, CUDA, CakePHP, ChefCookbook,
+                          Clojure, CodeIgniter, CommonLisp, Composer,     Concrete5,
+                          Coq, CraftCMS, D, DM, Dart, Delphi, Drupal,     EPiServer,
+                          Eagle, Elisp, Elixir, Elm, Erlang,     ExpressionEngine,
+                          ExtJs, Fancy, Finale, ForceDotCom, Fortran,     FuelPHP,
+                          GWT, GitBook, Go, Gradle, Grails, Haskell, IGORPro,
+                          Idris, Java, Jboss, Jekyll, Joomla, Julia, KiCAD,
+                          Kohana, LabVIEW, Laravel, Leiningen, LemonStand,
+                          Lilypond, Lithium, Lua, Magento, Maven, Mercury,
+                          MetaProgrammingSystem, Nim, Node, OCaml,     Objective-C,
+                          Opa, OracleForms, Packer, Perl, Phalcon,
+                          PlayFramework, Plone, Prestashop, Processing,
+                          PureScript, Python, Qooxdoo, Qt, R, ROS, Rails,
+                          RhodesRhomobile, Ruby, Rust, SCons, Sass, Scala,
+                          Scheme, Scrivener, Sdcc, SeamGen, SketchUp,     Smalltalk,
+                          SugarCRM, Swift, Symfony, SymphonyCMS, TeX,     Terraform,
+                          Textpattern, TurboGears2, Typo3, Umbraco, Unity,
+                          UnrealEngine, VVVV, VisualStudio, Waf, WordPress,
+                          Xojo, Yeoman, Yii, ZendFramework, Zephir, gcov,     nanoc,
+                          opencart, stella
+    -li LICENSE, <span class="hljs-comment">--license LICENSE</span>
+                          Choose <span class="hljs-literal">one</span> <span class="hljs-keyword">of</span> these license templates <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span>     project:
+                          mit, apache<span class="hljs-number">-2.0</span>, agpl<span class="hljs-number">-3.0</span>, lgpl<span class="hljs-number">-2.1</span>, bsd<span class="hljs-number">-3</span>-clause,
+                          gpl<span class="hljs-number">-2.0</span>, mpl<span class="hljs-number">-2.0</span>, gpl<span class="hljs-number">-3.0</span>, bsd<span class="hljs-number">-2</span>-clause, lgpl<span class="hljs-number">-3.0</span>,
+                          unlicense, epl<span class="hljs-number">-1.0</span></pre></li>
+</ul>
+</div></article></div><footer><div style="box-sizing:border-box;max-width:768px;margin-left:auto;margin-right:auto;margin-bottom:32px;padding-top:8px;padding-bottom:8px;padding-left:32px;padding-right:32px;"><div style="margin-left:-16px;margin-right:-16px;"><a href="https://github.com/slyboots/7-ghub-cli" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a><a href="https://github.com/slyboots" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">slyboots</a></div><div></div></div></footer></div><div style="font-family:-apple-system, sans-serif;font-size:12px;font-weight:600;text-align:right;padding:24px;color:#333;background-color:#eee;"><a href="http://compositor.io" style="color:inherit;text-decoration:none;">Built with Compositor.io</a></div></body></html>
