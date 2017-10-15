@@ -182,6 +182,10 @@ def new_entry_func(args):
     })
     res = requests.post(repo_endpoint, data=new_repo_data, headers=req_header)
     res.raise_for_status()
+    if res.status_code == 201:
+        print(f"Repository {args.name} successfully created at:\n"
+              f"https://github.com/{USER_NAME}/{args.name}")
+    print(res.json())
     print(res.json())
 
 
