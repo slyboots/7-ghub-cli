@@ -10,6 +10,7 @@ import requests
 # configuration variable definitions
 API_URL = 'https://api.github.com'
 ACCESS_TOKEN = os.getenv('GITHUB_ACCESS_TOKEN')
+USER_NAME = os.getenv('GITHUB_USER_NAME')
 # license template list created using the github api
 # https://api.github.com/licenses
 LICENSES = [
@@ -186,7 +187,20 @@ def new_entry_func(args):
         print(f"Repository {args.name} successfully created at:\n"
               f"https://github.com/{USER_NAME}/{args.name}")
     print(res.json())
-    print(res.json())
+
+
+def rm_entry_func(args):
+    '''
+    entry func for the rm sub-command
+    deletes a remote repository
+    '''
+    repo_endpoint = f"{API_URL}/{USER_NAME}/{args.name}"
+    res = requests.delete(repo_endpoint)
+    res.raise_for_status()
+    if res.status_code == 204:
+        print(f"Repository {args.name} successfully deleted!")
+    else:
+        print(res.json())
 
 
 # argparse code
@@ -254,16 +268,28 @@ NEW_SUBPARSER.add_argument(
 NEW_SUBPARSER.set_defaults(func=new_entry_func)
 
 
+RM_SUBPARSER = SUBPARSERS.add_parser(
+    'rm', help='delete a remote repo'
+)
+RM_SUBPARSER.add_argument(
+    'name',
+    help='name of the remote repo'
+)
+RM_SUBPARSER.set_defaults(func=rm_entry_func)
+
+
 # main entry func
 def entry_func():
     try:
         if ACCESS_TOKEN is None:
             raise EnvironmentError
+        if USER_NAME is None:
+            raise EnvironmentError
         ARGS = PARSER.parse_args()
         ARGS.func(ARGS)
     except EnvironmentError:
-        print("ERROR: No value for github access token.\n"
-              "Is the GITHUB_ACCESS_TOKEN environment variable set?")
+        print("ERROR: Missing required environment variables.\n"
+              "Are GITHUB_ACCESS_TOKEN and GITHUB_USER_NAME set?")
     except AttributeError as atr_err:
         print(f"ERROR: {atr_err}")
         PARSER.print_help()
