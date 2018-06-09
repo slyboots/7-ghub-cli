@@ -1,5 +1,5 @@
 {
-  "name": "slyboots/7-ghub-cli",
+  "name": "slyboots/ghub-cli",
   "version": "0.1.4",
   "libraries": {
     "xv": "^1.1.25"
@@ -38,29 +38,29 @@
       "component": "nav",
       "links": [
         {
-          "href": "https://github.com/slyboots/7-ghub-cli",
+          "href": "https://slyboots.github.io/ghub-cli",
           "text": "Home"
         },
         {
-          "href": "https://github.com/slyboots/7-ghub-cli",
+          "href": "https://github.com/slyboots/ghub-cli",
           "text": "GitHub"
         }
       ]
     },
     {
       "component": "header",
-      "heading": "7-ghub-cli",
+      "heading": "ghub-cli",
       "subhead": "A simple cli for managing github repos",
       "children": [
         {
           "component": "ui/TweetButton",
-          "text": "7-ghub-cli: A simple cli for managing github repos",
-          "url": "https://github.com/slyboots/7-ghub-cli"
+          "text": "ghub-cli: A simple cli for managing github repos",
+          "url": "https://github.com/slyboots/ghub-cli"
         },
         {
           "component": "ui/GithubButton",
           "user": "slyboots",
-          "repo": "7-ghub-cli"
+          "repo": "ghub-cli"
         }
       ]
     },
@@ -75,7 +75,7 @@
       "component": "footer",
       "links": [
         {
-          "href": "https://github.com/slyboots/7-ghub-cli",
+          "href": "https://github.com/slyboots/ghub-cli",
           "text": "GitHub"
         },
         {
